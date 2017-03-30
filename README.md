@@ -57,7 +57,7 @@ Project | Aras
 
 ## Usage
 
-For more information on using this project in Aras 9.1, refer to [Aras Innovator-Affected Item Details in Email.doc](.\Documentation\Aras%20Innovator-Affected%20Item%20Details%20in%20Email.doc).
+For more information on using this project in Aras 9.1, refer to [Aras Innovator-Affected Item Details in Email.doc](./Documentation/Aras%20Innovator-Affected%20Item%20Details%20in%20Email.doc).
 
 ## Contributing
 
