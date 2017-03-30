@@ -1,0 +1,49 @@
+﻿<AML>
+ <Item type="Method" id="2BF1F6C4595C48938FB56602FE32D77D" action="add">
+  <method_code><![CDATA[Innovator inn = this.newInnovator();
+I18NSessionContext cntx = inn.getI18NSessionContext();
+int count = this.getItemCount();
+
+//Check for Items in the DOM
+if (!(count > 0))
+{
+  //do nothing
+}
+else
+{
+
+    for (int i = 0; i < count; i++)
+	{
+        Item comments = inn.newItem("TestItem Comments", "get");
+        comments.setAttribute("select","comment_text, created_by_id, created_on");
+        comments.setAttribute("where", "source_id = '" + this.getItemByIndex(i).getID() +"'");
+        comments = comments.apply();
+        if (comments.isError())
+        {
+      	    continue;
+        }
+        string fedcomments = "Comment Thread: \n\n";
+        for (int j = 0; j<comments.getItemCount(); j++)
+        {
+ 	        Item com = comments.getItemByIndex(j);
+ 	    
+ 	        Item comuser = inn.newItem("User", "get");
+            comuser.setProperty("id",com.getProperty("created_by_id",""));
+	        comuser = comuser.apply();
+	        if (comuser.isError())
+	        {
+	            return comuser;
+            }
+	        string fname = comuser.getProperty("first_name","");
+	        string lname = comuser.getProperty("last_name","");
+	        fedcomments = fedcomments +  cntx.ConvertFromNeutral(com.getProperty("created_on",""),"date","short_date_time") + "\t" +fname + " " + lname + ": " + com.getProperty("comment_text","") + "\n\n";
+        }
+        this.getItemByIndex(i).setProperty("fed_comments",fedcomments);
+	}
+	
+}
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>FederateTestItemComments</name>
+ </Item>
+</AML>

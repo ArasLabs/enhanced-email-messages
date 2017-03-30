@@ -1,0 +1,3 @@
+<imports>
+  <package name="Federated_Comments" path="Federated_Comments\Import" />
+</imports>

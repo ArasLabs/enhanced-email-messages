@@ -1,0 +1,57 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="843204A1BE0F4A4C8F51DAAB2523E06E" action="add">
+  <name>TestItem LC</name>
+  <start_state keyed_name="Start" type="Life Cycle State">B554154AF53B475DA081D4D2A50451EC</start_state>
+  <Relationships>
+   <Item type="Life Cycle State" id="B554154AF53B475DA081D4D2A50451EC" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>Start</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="TestItem LC" type="Life Cycle Map">843204A1BE0F4A4C8F51DAAB2523E06E</source_id>
+   </Item>
+   <Item type="Life Cycle State" id="5CED457162544B6C9B5E95176A77140E" action="add">
+    <image>../images/icons/20x20/20x15_lifecycle.gif</image>
+    <name>TestEmail</name>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="TestItem LC" type="Life Cycle Map">843204A1BE0F4A4C8F51DAAB2523E06E</source_id>
+    <state_permission_id keyed_name="World Can Get" type="Permission">93AB06D37FC84328A314324DC45DB574</state_permission_id>
+    <x>104</x>
+    <y>57</y>
+    <Relationships>
+     <Item type="State EMail" id="004418712BDF4D5190B533A42A416B27" action="add">
+      <related_id keyed_name="TestItem Email" type="EMail Message">4697C6B25E32466F8EE8978E5C9D9C43</related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="TestEmail" type="Life Cycle State">5CED457162544B6C9B5E95176A77140E</source_id>
+      <Relationships>
+       <Item type="State Distribution" id="DE0FD17E05BB48F3B2F2B0C4118620DA" action="add">
+        <related_id keyed_name="Innovator Admin" type="Identity">
+         <Item type="Identity" action="get" select="id">
+          <name>Innovator Admin</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="004418712BDF4D5190B533A42A416B27" type="State EMail">004418712BDF4D5190B533A42A416B27</source_id>
+       </Item>
+      </Relationships>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="Life Cycle Transition" id="2FD327BE7D474E489F83EA6AA2600E8E" action="add">
+    <from_state keyed_name="Start" type="Life Cycle State">B554154AF53B475DA081D4D2A50451EC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="TestItem LC" type="Life Cycle Map">843204A1BE0F4A4C8F51DAAB2523E06E</source_id>
+    <to_state keyed_name="TestEmail" type="Life Cycle State">5CED457162544B6C9B5E95176A77140E</to_state>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

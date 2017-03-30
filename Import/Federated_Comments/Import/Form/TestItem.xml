@@ -1,0 +1,86 @@
+﻿<AML>
+ <Item type="Form" id="BAAA6D7AB5554382BD95100781C01AA1" action="add">
+  <name>TestItem</name>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <Relationships>
+   <Item type="Body" id="330A6CD29A614F439EAB34CC2B1BECF7" action="add">
+    <bg_attach>scroll</bg_attach>
+    <bg_color>#FFFFFF</bg_color>
+    <bg_image>../images/Backgrounds/wvleft.gif</bg_image>
+    <bg_repeat>no-repeat</bg_repeat>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="TestItem" type="Form">BAAA6D7AB5554382BD95100781C01AA1</source_id>
+    <Relationships>
+     <Item type="Field" id="38D0A57C577B48FB8504CF5D2C910C41" action="add">
+      <bg_color>#FFFFFF</bg_color>
+      <border_width>0</border_width>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Federated Comments</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <name>fed_comments</name>
+      <positioning>absolute</positioning>
+      <propertytype_id keyed_name="fed_comments" type="Property">B367CB72702844BE8609DF991675EBA1</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="330A6CD29A614F439EAB34CC2B1BECF7" type="Body">330A6CD29A614F439EAB34CC2B1BECF7</source_id>
+      <tab_index>256</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>50</y>
+     </Item>
+     <Item type="Field" id="FEEE00BF8B3244278244826B5B61D12B" action="add">
+      <bg_color>#FFFFFF</bg_color>
+      <field_type>html</field_type>
+      <html_code><![CDATA[<span id='ITEM_INFO_INTERNAL_SPAN'/>
+<script>
+  populate_ITEM_INFO_INTERNAL_SPAN = function()
+  {
+    document.getElementById('ITEM_INFO_INTERNAL_SPAN').innerHTML = top.aras.uiGetItemInfoTable(document.itemType);
+  }
+  window.attachEvent('onload', populate_ITEM_INFO_INTERNAL_SPAN);
+</script>]]></html_code>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <list_no_blank>0</list_no_blank>
+      <name>item_info</name>
+      <positioning>absolute</positioning>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="330A6CD29A614F439EAB34CC2B1BECF7" type="Body">330A6CD29A614F439EAB34CC2B1BECF7</source_id>
+      <tab_stop>0</tab_stop>
+      <x>0</x>
+      <y>0</y>
+     </Item>
+     <Item type="Field" id="CAA9B536E4564FCBAA2B684B514511C1" action="add">
+      <bg_color>#f5f5dc</bg_color>
+      <border_width>0</border_width>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <name>name</name>
+      <positioning>absolute</positioning>
+      <propertytype_id keyed_name="name" type="Property">23F8F7CBB7034DFD94225B55E7B2180B</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="330A6CD29A614F439EAB34CC2B1BECF7" type="Body">330A6CD29A614F439EAB34CC2B1BECF7</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>190</x>
+      <y>10</y>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
