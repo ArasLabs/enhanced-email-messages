@@ -20,12 +20,14 @@ This project and the following release notes have been migrated from the old Ara
 
 Release | Notes
 --------|--------
+[v2](https://github.com/ArasLabs/enhanced-email-messages/releases/tag/v2) | Federated Affected Item Details for Email Messages Document. Can be used in 9.1
 [v1](https://github.com/ArasLabs/enhanced-email-messages/releases/tag/v1) | Federated Comments Package for Import for 9.0.1 and 9.0.2 only.
 
 #### Supported Aras Versions
 
 Project | Aras
 --------|------
+[v2](https://github.com/ArasLabs/enhanced-email-messages/releases/tag/v2) | 9.1, 9.2
 [v1](https://github.com/ArasLabs/enhanced-email-messages/releases/tag/v1) | 9.0.1, 9.0.2
 
 ## Installation
@@ -62,6 +64,10 @@ Project | Aras
 5. Submit a pull request
 
 For more information on contributing to this project, another Aras Labs project, or any Aras Community project, shoot us an email at araslabs@aras.com.
+
+## Usage
+
+For more information on using this project in Aras 9.1, refer to [Aras Innovator-Affected Item Details in Email.doc](.\Documentation\Aras%20Innovator-Affected%20Item%20Details%20in%20Email.doc).
 
 ## Credits
 
